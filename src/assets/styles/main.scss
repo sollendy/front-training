@@ -3,3 +3,10 @@ $fa-font-path: "./webfonts";
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import 'bootstrap/scss/bootstrap';
+* {
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.orange-hover:hover {
+    color: rgb(217, 143, 107);
+}
