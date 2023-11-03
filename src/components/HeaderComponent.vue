@@ -2,7 +2,7 @@
     <section>
         <nav class="mx-5 d-flex justify-content-between align-items-center">
             <div class="logo">
-                Logo
+                <img src="../assets/img/logoBoolBNB.png" class="w-50" alt="logo">
             </div>
             <div class="center-nav d-flex gap-3 align-items-center">
                 <b class="orange-hover fs-3">Home</b>
@@ -42,6 +42,12 @@ export default {
         div {
             a {
                 color: rgb(68, 110, 112);
+            }
+        }
+        .logo {
+            width: 10%;
+            img {
+                width: 10%;
             }
         }
     }
