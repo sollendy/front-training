@@ -23,11 +23,10 @@
         <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
             <div class="d-flex flex-column text-center">
               <!-- <h5 class="text-body-emphasis h4">Collapsed content</h5> -->
-              <span class="text-primary bg-secondary fs-4">Home</span>
-              <span class="text-primary bg-secondary fs-4">Appartamenti</span>
-              <span class="text-primary bg-secondary fs-4">Contatti</span>
-              <span class="text-primary bg-secondary fs-4">Affitta con BoolBnB</span>
-            
+              <span class="collapsed fs-4">Home</span>
+              <span class="collapsed fs-4">Appartamenti</span>
+              <span class="collapsed fs-4">Contatti</span>
+              <span class="collapsed fs-4">Affitta con BoolBnB</span>
             </div>
         </div>
     </section>
@@ -65,6 +64,27 @@ export default {
            // width: 10%;
             img {
                 width: 80px;
+            }
+        }
+        .navbar {
+            div {
+                .navbar-toggler {
+                    border-color: rgb(68, 110, 112);
+                    span.navbar-toggler-icon {
+                        color: rgb(68, 110, 112);
+                    }
+                }
+            }
+        }
+    }
+    .collapse {
+        div {
+            background-color: rgb(250, 250, 250);
+            .collapsed {
+                color: rgb(68, 110, 112);
+            }
+            .collapsed:hover {
+                background-color: rgb(217, 143, 107);
             }
         }
     }
