@@ -20,7 +20,7 @@
                 </div>
             </nav>
         </nav>
-        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="collapse d-md-none" id="navbarToggleExternalContent" data-bs-theme="dark">
             <div class="d-flex flex-column text-center">
               <!-- <h5 class="text-body-emphasis h4">Collapsed content</h5> -->
               <span class="collapsed fs-4">Home</span>
@@ -85,6 +85,7 @@ export default {
             }
             .collapsed:hover {
                 background-color: rgb(217, 143, 107);
+                color: white;
             }
         }
     }
