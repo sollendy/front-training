@@ -1,18 +1,35 @@
 <template>
     <section>
-        <nav class="mx-5 d-flex justify-content-between align-items-center">
+        <nav class="mx-5 d-flex justify-content-around justify-content-md-between align-items-center">
             <div class="logo">
-                <img src="../assets/img/logoBoolBNB.png" class="w-50" alt="logo">
+                <img src="../assets/img/logoBoolBNB.png" class="" alt="logo">
             </div>
-            <div class="center-nav d-flex gap-3 align-items-center">
+            <div class="center-nav d-none d-md-flex gap-3 align-items-center">
                 <b class="orange-hover fs-3">Home</b>
                 <b class="orange-hover fs-3">Appartamenti</b>
                 <b class="orange-hover fs-3">Contatti</b>
             </div>
-            <div class="end-navd-flex align-items-center">
+            <div class="end-nav d-none d-md-flex align-items-center">
                 <a class="orange-hover text-decoration-none link-underline link-underline-opacity-0 fs-5 fw-bold" href="#">Affitta con BoolBnB</a>
             </div>
+            <nav class="navbar d-inline d-md-none">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+            </nav>
         </nav>
+        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="d-flex flex-column text-center">
+              <!-- <h5 class="text-body-emphasis h4">Collapsed content</h5> -->
+              <span class="text-primary bg-secondary fs-4">Home</span>
+              <span class="text-primary bg-secondary fs-4">Appartamenti</span>
+              <span class="text-primary bg-secondary fs-4">Contatti</span>
+              <span class="text-primary bg-secondary fs-4">Affitta con BoolBnB</span>
+            
+            </div>
+        </div>
     </section>
 </template>
   
@@ -45,9 +62,9 @@ export default {
             }
         }
         .logo {
-            width: 10%;
+           // width: 10%;
             img {
-                width: 10%;
+                width: 80px;
             }
         }
     }
