@@ -1,6 +1,6 @@
 <template>
     <section class="giumbo d-flex justify-content-between align-items-center position-relative">
-        <div class="schizzo-cont position-absolute">
+        <div class="schizzo schizzo-cont position-absolute">
             <img src="../assets/img/schizzo2.png" class="top-img w-75" alt="schizzo">
         </div>
         <div class="title-search pt-4 d-flex flex-column justify-content-center align-items-between">
@@ -12,17 +12,19 @@
                 </button>
             </div>
         </div>
-        <div class="schizzo2-cont">
+        <div class="schizzo schizzo2-cont">
             <img src="../assets/img/schizzo1.png" class="top-img position-absolute" alt="schizzo">
         </div>
     </section>
-    <section>
-        
+    <section class="pt-5">
+        <WavesComponent></WavesComponent>
+        <h1>AAAAAAAAAAAAAAAAAAAAA</h1>
     </section>
 
 </template>
 
 <script>
+import WavesComponent from '../components/WavesComponent.vue';
 export default {
     name: 'Home',
     data() {
@@ -34,7 +36,7 @@ export default {
 
     },
     components: {
-
+        WavesComponent,
     },
     mounted() {
 
@@ -44,8 +46,16 @@ export default {
   
 <style lang="scss" scoped>
     .giumbo {
+        overflow: hidden;
+        padding-bottom: 5rem;
         h1 {
             color: rgb(217, 128, 108);
+        }
+        .schizzo {
+            img {
+                position: relative;
+                z-index: 3;
+            }
         }
         .schizzo-cont {
            // height: 285px;
