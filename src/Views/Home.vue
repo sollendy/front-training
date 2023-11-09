@@ -19,14 +19,31 @@
     <section class="pt-5">
         <WavesComponent></WavesComponent>
         <div class="sub-waves pt-5">
-            <!-- <div class="swiper">
-                <div class="swiper-wrapper d-flex align-items-center justify-content-around">
-                    <div class="arrows left-arrow">
+            <CarouselComponent :config="config" :items="apartments"></CarouselComponent>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- <div class="arrows left-arrow">
                         <i class="swiper-button-prev fa-solid fa-chevron-left"></i>
-                    </div>
+                    </div> -->
                     <div class="swiper-slide image-text w-25 d-flex flex-column align-items-center">
                         <div class="img-swiper img-sx w-75 rounded d-flex justify-content-center">
                             <img src="../assets/img/tric0.jpg" class=" rounded w-75" alt="swiper img">
+                        </div>
+                        <div class="text-card w-75 text-center">
+                            <p>ita sunt eius obcaecati blanditiis rerum? Sapiente aliquid magnam perferendis itaque </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide image-text w-25 d-flex flex-column align-items-center">
+                        <div class="img-swiper main-img w-100 rounded d-flex justify-content-center">
+                            <img src="../assets/img/yarni.jpg" class=" rounded w-75" alt="swiper img">
+                        </div>
+                        <div class="text-card w-75 text-center">
+                            <p>ita sunt eius obcaecati blanditiis rerum? Sapiente aliquid magnam perferendis itaque </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide image-text w-25 d-flex flex-column align-items-center">
+                        <div class="img-swiper main-img w-100 rounded d-flex justify-content-center">
+                            <img src="../assets/img/yarni.jpg" class=" rounded w-75" alt="swiper img">
                         </div>
                         <div class="text-card w-75 text-center">
                             <p>ita sunt eius obcaecati blanditiis rerum? Sapiente aliquid magnam perferendis itaque </p>
@@ -48,79 +65,65 @@
                             <p>ita sunt eius obcaecati blanditiis rerum? Sapiente aliquid magnam perferendis itaque </p>
                         </div>
                     </div>
-                    <div class="arrows right-arrow">
+                    <!-- <div class="arrows right-arrow">
                         <i class="swiper-button-next fa-solid fa-chevron-right"></i>
-                    </div>
+                    </div> -->
                 </div>
-            </div> -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
+            </div>
+            <!-- <div class="swiper">
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide">Slide 1</div>
                     <div class="swiper-slide">Slide 2</div>
                     <div class="swiper-slide">Slide 3</div>
                     ...
                 </div>
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
 
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
 
-                <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
-            </div>
+            </div> -->
         </div>
     </section>
 </template>
 
 <script>
 import WavesComponent from '../components/WavesComponent.vue';
-// import Swiper JS
-import Swiper from 'swiper';
+import CarouselComponent from '../components/CarouselComponent.vue';
+
 // import Swiper styles
 export default {
     name: 'Home',
     data() {
         return {
+            apartments: [
+                {name: "ap1", photo: "https://picsum.photos/200"},
+                {name: "ap1", photo: "https://picsum.photos/200"},
+                {name: "ap1", photo: "https://picsum.photos/200"},
+                {name: "ap1", photo: "https://picsum.photos/200"},
+                {name: "ap1", photo: "https://picsum.photos/200"}
+            ],
+            config: {
+                spv: 3,
+                space: 30,
+            }
            // swiper: null,
         }
     },
     methods: {
-        swiper() {
-            const swiper = new Swiper('.swiper', {
-                // Optional parameters
-                direction: 'horizontal',
-                loop: true,
-
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-
-                // And if we need scrollbar
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                },
-            });
-        }
+        
     },
     components: {
         WavesComponent,
+        CarouselComponent
     },
     mounted() {
-        this.swiper()
+
     },
 
     beforeCreate() {
+
     },
 }
 </script>
@@ -184,12 +187,12 @@ export default {
 .sub-waves {
     background-color: rgb(47, 176, 189);
 
+}</style>
+<!-- .swiper {
     .swiper {
-        .swiper {
-            .arrows {
-                color: rgb(217, 128, 108);
-                font-size: 50px;
-            }
+        .arrows {
+            color: rgb(217, 128, 108);
+            font-size: 50px;
         }
     }
-}</style>
+} -->
