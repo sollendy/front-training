@@ -1,14 +1,27 @@
 <script>
+import { store } from "../store/store";
+import MultiselectComponent from '../components/MultiselectComponent.vue'
+
 export default {
     name: 'SearchComponent',
+    components: { MultiselectComponent },
+    data() {
+        return {
+            store,
+        };
+    },
+    mounted() {
+        store.fetchServices();
+    }
 }
 </script>
+
 <template>
     <div class="container">
         <div class="row g-5 my-5">
             <div class="col-md-4">
-                <small for="where">Dove</small>
-                <input type="text" class="form-control" id="where" name="where" placeholder="Cerca una destinazione">
+                <small for="address">Indirizzo</small>
+                <input type="text" class="form-control" id="address" name="address" placeholder="Cerca una destinazione">
             </div>
             <div class="col-md-4">
                 <small for="rooms">Numero di stanze</small>
@@ -22,21 +35,36 @@ export default {
             </div>
             <div class="col-md-8">
                 <small for="service">Servizi</small>
-                <select class="form-select" aria-small="Default select example" >
-                    <option disabled selected>Seleziona i servizi che desideri</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+                <MultiselectComponent></MultiselectComponent>
             </div>
             <div class="col-md-4">
                 <small for="km">Raggio di ricerca</small>
-                <input type="number" class="form-control" id="km" name="km"
-                    placeholder="Cerca entro un limite di Km">
+                <input type="number" class="form-control" id="km" name="km" placeholder="Cerca entro un limite di Km">
             </div>
+
         </div>
+
     </div>
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+
+small {
+    color: $dark
+}
+
+input {
+    border: 1px solid $primary;
+    border-radius: 8px;
+    padding: 1rem 20px;
+    color: $primary;
+
+    &::placeholder {
+        color: $primary;
+    }
+
+    ;
+}
+</style>

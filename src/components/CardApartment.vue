@@ -3,6 +3,7 @@ export default {
     name: 'CardApartment'
 }
 </script>
+
 <template>
 <div class="box">
     <div class="container py-5">
