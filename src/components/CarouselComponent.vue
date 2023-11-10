@@ -24,9 +24,9 @@ export default {
     :spaceBetween="config.space"
     :centeredSlides="true"
     >
-        <swiper-slide v-for="item in items" class="d-flex flex-column justify-content-center align-items-center">
-            <img :src="item.photo" :alt="item.name">
-            <h4>{{ item.name }}</h4>
+        <swiper-slide v-for="item in items" class="slider d-flex flex-column justify-content-center align-items-center">
+            <img :src="item.photo" :alt="item.name" class="slider-img rounded">
+            <h4 class="slider-text text-center pt-3 w-100">{{ item.name }}</h4>
         </swiper-slide>
     </swiper>
 </template>
@@ -35,5 +35,16 @@ export default {
     .swiper-slide-active {
         scale: 1.3;
         transition: all .5s;
+    }
+    .slider {
+        overflow: hidden;
+        .slider-img {
+            width: 18rem;
+            max-width: 100%;
+            height: auto;
+        }
+        //.slider-text {
+        //    width: 18rem;
+        //}
     }
 </style>
