@@ -1,15 +1,15 @@
-<template>
-    <div class="selectMultiple w-100" :class="{ open: isOpen }">
-        <div @click.stop="toggleOpen" :class="{ error: store.specError }">
+<template >
+    <div class="selectMultiple w-100" :class="{ open: isOpen }" >
+        <div @click.stop="toggleOpen" :class="{ error: store.specError }" >
             <span v-if="!selectedServices.length">{{ placeholder }}</span>
             <a v-for="service in selectedServices" @click.stop="removeService(service)" class="">
-                <em>{{ service.name }}</em>
+                <em >{{ service.name }}</em>
                 <i></i>
             </a>
             <div class="arrow"></div>
         </div>
-        <ul>
-            <li v-for="service in services" @click.stop="selectedService(service)">
+        <ul v-show="isOpen">
+            <li v-for="service in services" @click.stop="selectedService(service)" > 
                 {{ service.name }}
             </li>
         </ul>
@@ -84,7 +84,6 @@ export default {
     methods: {
         toggleOpen() {
             this.isOpen = !this.isOpen;
-
         },
         closeOpen() {
             this.isOpen = false;

@@ -1,13 +1,16 @@
 <script>
 import { store } from "../store/store";
-import MultiselectComponent from '../components/MultiselectComponent.vue'
+import MultiselectComponent from '../components/MultiselectComponent.vue';
+import AddressComponent from "../components/AddressComponent.vue";
 
 export default {
     name: 'SearchComponent',
-    components: { MultiselectComponent },
+    components: { MultiselectComponent, AddressComponent },
     data() {
         return {
             store,
+            addressInput: "",
+            coordinateInput: "",
         };
     },
     mounted() {
@@ -20,9 +23,9 @@ export default {
     <div class="container">
         <div class="row g-5 my-5">
             <div class="col-md-4">
-                <small for="address">Indirizzo</small>
-                <input type="text" class="form-control" id="address" name="address" placeholder="Cerca una destinazione">
+                <AddressComponent></AddressComponent>
             </div>
+
             <div class="col-md-4">
                 <small for="rooms">Numero di stanze</small>
                 <input type="number" class="form-control" id="rooms" name="rooms"
@@ -33,7 +36,7 @@ export default {
                 <input type="number" class="form-control" id="beds" name="beds"
                     placeholder="Inserisci il numero minimo di letti">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8" v-if="store.servicesLoaded">
                 <small for="service">Servizi</small>
                 <MultiselectComponent></MultiselectComponent>
             </div>
@@ -65,6 +68,5 @@ input {
         color: $primary;
     }
 
-    ;
 }
 </style>

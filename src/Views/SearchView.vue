@@ -12,7 +12,7 @@ import CardApartment from '../components/CardApartment.vue';
 <template>
     <SearchComponent></SearchComponent>
     <WavesComponent></WavesComponent>
-    <CardApartment></CardApartment>
+   
 </template>
 
 
