@@ -1,18 +1,18 @@
 <template>
     <section class="giumbo d-flex justify-content-between align-items-center position-relative">
-        <div class="schizzo schizzo-cont position-absolute">
+        <div class="schizzo schizzo-cont d-none d-xl-block position-absolute">
             <img src="../assets/img/schizzo2.png" class="top-img w-75" alt="schizzo">
         </div>
         <div class="title-search pt-4 d-flex flex-column justify-content-center align-items-between">
-            <h1 class="pt-5 w-50">Il soggiorno perfetto per il tuo viaggio in pochi click</h1>
-            <div class="form-button w-50 d-flex flex-column align-items-center">
+            <h1 class="pt-5">Il soggiorno perfetto per il tuo viaggio in pochi click</h1>
+            <div class="form-button w-100 d-flex flex-column align-items-center">
                 <input class="form-control shadow mt-5 border-1" type="text" aria-label="default input example">
                 <button class="btn mt-4 w-25 text-light">
                     CERCA
                 </button>
             </div>
         </div>
-        <div class="schizzo schizzo2-cont">
+        <div class="schizzo schizzo2-cont d-none d-xl-block">
             <img src="../assets/img/schizzo1.png" class="top-img position-absolute" alt="schizzo">
         </div>
     </section>
@@ -110,6 +110,7 @@ export default {
         padding-left: 20%;
 
         h1 {
+            width: 35rem;
             font-size: 400%;
         }
 

@@ -1,6 +1,6 @@
 <template>
     <section>
-        <nav class="mx-5 d-flex justify-content-around justify-content-md-between align-items-center">
+        <nav class="mx-5 d-flex justify-content-between align-items-center">
             <div class="logo">
                 <img src="../assets/img/logoBoolBNB.png" class="" alt="logo">
             </div>
