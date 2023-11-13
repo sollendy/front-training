@@ -3,3 +3,27 @@ $fa-font-path: "./webfonts";
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import 'bootstrap/scss/bootstrap';
+
+$primary: rgb(68, 110, 112);
+$secondary: rgb(217, 128, 108);
+$light: rgb(250, 250, 250);
+$dark: rgb(36, 35, 37);
+
+$theme-colors-text: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+* {
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.orange-hover:hover {
+    color: rgb(217, 143, 107);
+}
