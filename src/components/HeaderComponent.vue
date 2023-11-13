@@ -1,13 +1,19 @@
 <template>
     <section>
-        <nav class="mx-5 d-flex justify-content-around justify-content-md-between align-items-center">
+        <nav class="mx-5 d-flex justify-content-between align-items-center">
             <div class="logo">
                 <img src="../assets/img/logoBoolBNB.png" class="" alt="logo">
             </div>
             <div class="center-nav d-none d-md-flex gap-3 align-items-center">
-                <b class="orange-hover fs-3">Home</b>
-                <b class="orange-hover fs-3">Appartamenti</b>
-                <b class="orange-hover fs-3">Contatti</b>
+                <a class="text-decoration-none link-underline link-underline-opacity-0" href="#">
+                    <b class="orange-hover fs-3">Home</b>
+                </a>
+                <a class="text-decoration-none link-underline link-underline-opacity-0" href="#">
+                    <b class="orange-hover fs-3">Appartamenti</b>
+                </a>
+                <a class="text-decoration-none link-underline link-underline-opacity-0" href="#">
+                    <b class="orange-hover fs-3">Contatti</b>
+                </a>
             </div>
             <div class="end-nav d-none d-md-flex align-items-center">
                 <a class="orange-hover text-decoration-none link-underline link-underline-opacity-0 fs-5 fw-bold" href="#">Affitta con BoolBnB</a>

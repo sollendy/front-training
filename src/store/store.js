@@ -2,6 +2,8 @@ import { reactive } from "vue";
 import axios from "axios";
 
 export const store = reactive({
+  apiUrl: "http://127.0.0.1:8000/api/",
+  premiumApartments: false,
     API_URL_BASE: "http://127.0.0.1:8000/",
     API_Apartments: "api/apartments",
     API_Search: "api/geoSearch",
